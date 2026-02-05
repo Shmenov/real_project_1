@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*----------
+		RESET
+----------*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*---------
+	GENERAL
+---------*/
+/* 
+Poppins:
+Light 300
+SemiBold 600
+
+Martel Sans:
+Regular 400
+Bold 700
+ExtraBold 800
+*/
+
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	background-color: #fff;
+	color: #3F4255;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.03em;
+}
+
+hr {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #9093A6;
+	transition: opacity 0.3s;
+}
+
+a:hover {
+	opacity: 0.6s; 
+}
+
+.container {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.btn {
+	font-family: "Martel Sans";
+	font-weight: 700;
+	line-height: 2;
+	letter-spacing: 0.02em;
+	padding: 15px 25px;
+	background-color: #F2F4FA;
+	color: #9093A6;
+	border-radius: 5px;
+}
+
+/*---------
+	HEADER
+---------*/
+.header {
+	padding: 25px 0;
+}
+
+.logotype {
+	height: 24px;
+}
+
+.header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__nav {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+}
+
+.header__list {
+	display: inline-flex;
+	gap: 50px;
+}
+
+.burger-menu {
+	display: block;
+	padding: 0;
+	border-radius: 50%;
+	border: 0px;
+	align-items: center;
+	width: 48px;
+	height: 48px;
+	background-color: #fff;
+	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+}
+
+/*---------
+	WELCOME
+---------*/
+
+.welcome .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.welcome__desc {
+	max-width: 530px;
+	margin-top: 120px;
+}
+
+.welcome__title {
+	font-family: "Poppins";
+	font-weight: 300;
+	font-size: 58px;
+	line-height: 1.1;
+	letter-spacing: 0.05em;
+	color: #3F4255;
+	width: 465px;
+	margin-bottom: 90px;
+}
+
+.welcome__btns-wrapper {
+	display: flex;
+	gap: 25px;
+	margin-bottom: 280px;
+}
+
+.welcome__btn {
+	border-radius: 5px;
+	border: 2px solid #FFE145;
+	padding: 19px 24px;
+}
+
+.welcome__text {
+	color: #3F4255;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.2;
+	font-family: "Martel Sans"
+}
+
+.reg {
+	color: #3F4255;
+	display: flex;
+	justify-content: center;
+	font-weight: 400;
+	font-size: 12px;
+	letter-spacing: 0;
+	line-height: 1.3; 
+	font-family: "Martel Sans"
+}
+
+.offers {
+	position: relative;
+	left: -25px;
+
+	display: flex;
+	width: 850px;
+	padding: 25px;
+	gap: 45px;
+
+	background-color: #fff;
+	border-radius: 16px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+}
+
+.offer {
+	display: flex;
+	gap: 16px;
+	width: 250px;
+}
+
+.offer__img {
+	width: 48px;
+	height: 48px;
+}
+
+.offer__text {
+	font-weight: 300;
+}
+
+.welcome__img {
+	margin-top: 25px;
+	width: 800px;
+}
+
+/*-------------
+	RESTAURANTS
+-------------*/
+.restaurants {
+	margin-top: 50px;
+}
+
+.restaurants__name {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.restaurants__title {
+	font-family: "Poppins";
+	font-weight: 300;
+	font-size: 36px;
+	line-height: 1.7;
+	letter-spacing: 0.08em;
+}
+
+.restaurants__card {
+	display: flex;
+	justify-content: center;
+	gap: 25px;
+	flex-wrap: wrap;
+}
+
+.card {
+	width: 300px;
+	
+}
+
+.card__img-top {
+	/* height: 190px; */
+}
+
+.card__img-bottom {
+
+}
