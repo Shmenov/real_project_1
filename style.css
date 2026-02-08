@@ -115,6 +115,14 @@ a:hover {
 	border-radius: 5px;
 }
 
+.title {
+	font-family: "Poppins";
+	font-weight: 300;
+	font-size: 36px;
+	line-height: 1.7;
+	letter-spacing: 0.08em;
+}
+
 /*---------
 	HEADER
 ---------*/
@@ -261,14 +269,6 @@ a:hover {
 	margin-bottom: 50px;
 }
 
-.restaurants__title {
-	font-family: "Poppins";
-	font-weight: 300;
-	font-size: 36px;
-	line-height: 1.7;
-	letter-spacing: 0.08em;
-}
-
 .restaurants__card {
 	display: flex;
 	justify-content: space-between;
@@ -322,5 +322,73 @@ a:hover {
 
 /*----------
 	SEARCH
+----------*/
+.search {
+	margin-top: 70px;
+	background-color: #F2F4FA;
+}
+
+.search__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 80px 170px;
+}
+
+.search__title {
+	margin-bottom: 25px;
+}
+
+.search__text {
+	font-family: "Martel Sans";
+	width: 390px;
+}
+
+.delivery {
+	display: flex;
+	gap: 5px;
+}
+
+.delivery__form {
+	position: relative;
+}
+
+.delivery__form::before {
+	content: url('/images/Subtract.svg');
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 27px;
+	left: 20px;
+}
+
+/* !Убрать картинку при введении текста */
+
+.delivery-form__input {
+	width: 340px;
+	height: 75px;
+	border-radius: 6px;
+	border: #FFF;
+	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+}
+
+.delivery-form__input::placeholder {
+	font-family: "Martel Sans";
+	color: #B7B9C3;
+	padding-left: 50px;
+}
+
+.delivery__btn {
+	font-family: "Martel Sans";
+	font-weight: 700;
+	line-height: 1.2;
+	color: #B79C10;
+	padding: 25px;
+	background-color: #FFE145;
+	border-radius: 5px;
+}
+
+/*----------
+	SPECIAL
 ----------*/
 
