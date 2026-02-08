@@ -72,6 +72,7 @@ html {
 }
 
 body {
+	font-family: "Poppins", "Martel Sans";
 	background-color: #fff;
 	color: #3F4255;
 	font-weight: 400;
@@ -104,6 +105,12 @@ a:hover {
 	padding: 0 15px;
 }
 
+.name {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
 .btn {
 	font-family: "Martel Sans";
 	font-weight: 700;
@@ -121,6 +128,30 @@ a:hover {
 	font-size: 36px;
 	line-height: 1.7;
 	letter-spacing: 0.08em;
+}
+
+.card__btn {
+	cursor: pointer;
+	position: absolute;
+	padding: 0;
+	border-radius: 50%;
+	border: 0;
+	align-items: center;
+	width: 48px;
+	height: 48px;
+	background-color: #fff;
+	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+}
+
+.card__btn-1 {
+	top: 124px;
+	left: -20px;
+}
+
+.card__btn-2 {
+	top: 124px;
+	right: -20px;
+	transform: rotate(180deg);
 }
 
 /*---------
@@ -263,12 +294,6 @@ a:hover {
 	margin-top: 50px;
 }
 
-.restaurants__name {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 50px;
-}
-
 .restaurants__card {
 	display: flex;
 	justify-content: space-between;
@@ -294,30 +319,6 @@ a:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.card__btn {
-	cursor: pointer;
-	position: absolute;
-	padding: 0;
-	border-radius: 50%;
-	border: 0;
-	align-items: center;
-	width: 48px;
-	height: 48px;
-	background-color: #fff;
-	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
-}
-
-.card__btn-1 {
-	top: 124px;
-	left: -20px;
-}
-
-.card__btn-2 {
-	top: 124px;
-	right: -20px;
-	transform: rotate(180deg);
 }
 
 /*----------
@@ -381,7 +382,6 @@ a:hover {
 .delivery__btn {
 	font-family: "Martel Sans";
 	font-weight: 700;
-	line-height: 1.2;
 	color: #B79C10;
 	padding: 25px;
 	background-color: #FFE145;
@@ -391,4 +391,48 @@ a:hover {
 /*----------
 	SPECIAL
 ----------*/
+.special {
+	margin-top: 70px;
+	margin-bottom: 70px;
+}
 
+.speacial__card {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.card__food {
+	width: 136px;
+	height: 136px;
+	border-radius: 6px;
+	box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.food {
+	
+}
+
+.food__name {
+	font-family: "Martel Sans";
+	color: #313030;
+	font-weight: 300;
+	text-align: center;
+}
+
+.card__btn-11 {
+	top: 44px;
+	left: -20px;
+}
+
+.card__btn-22 {
+	top:44px;
+	right: -20px;
+	transform: rotate(180deg);
+}
