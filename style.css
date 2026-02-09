@@ -436,3 +436,105 @@ a:hover {
 	right: -20px;
 	transform: rotate(180deg);
 }
+
+/*-------
+	LEMON
+-------*/
+
+.lemon {
+	height: 290px;
+	background-image: url('/images/lemon.jpg');
+	background-position: 90% 15%;
+	background-size: 130%;
+	background-repeat: no-repeat;
+}
+
+.lemon__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 55px 345px;
+}
+
+.lemon__circle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.circle {
+	font-family: sans-serif;
+	font-weight: 700;
+	font-size: 58px;
+	line-height: 1.1;
+	letter-spacing: 0.05em;
+	position: relative;
+}
+
+.circle::before {
+	content: "";
+	position: absolute;
+	width: 126px;
+	height: 126px;
+	border-radius: 50%;
+	background-color: #ffe145;
+	top: 0;
+	left: 0;
+}
+
+.circle::after {
+	content: "";
+	position: absolute;
+	width: 127px;
+	height: 127px;
+	border-radius: 50%;
+	border: 1px solid #B79C10;
+	top: 0;
+	left: 0;
+}
+
+.circle__text {
+	font-family: "Poppins";
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.3;
+	letter-spacing: 0em;
+	/* margin-top: 50px; */
+}
+
+/*-----
+	MAP
+-----*/
+.map {
+	margin-top: 70px;
+	margin-bottom: 70px;
+}
+
+/*-------
+	LINKS
+-------*/
+.links {
+	margin-bottom: 70px;
+}
+
+.pale {
+	opacity: 0.5;
+}
+
+.links__card {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.link__card {
+	width: 296px;
+	height: 299px;
+	border-radius: 6px;
+	object-fit: cover;
+}
+
+/*-------
+	FOOTER
+-------*/
+
