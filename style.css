@@ -162,6 +162,7 @@ a:hover {
 }
 
 .logotype {
+	width: 185px;
 	height: 24px;
 }
 
@@ -190,7 +191,7 @@ a:hover {
 	align-items: center;
 	width: 48px;
 	height: 48px;
-	background-color: #fff;
+	background-color: transparent;
 	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
 	cursor: pointer;
 }
@@ -363,7 +364,13 @@ a:hover {
 	left: 20px;
 }
 
-/* !Убрать картинку при введении текста */
+.delivery__form:has(.delivery-form__input:not(:placeholder-shown))::before {
+    display: none;
+}
+
+.delivery-form__input:not(:placeholder-shown) {
+    padding-left: 20px; /* Смещаем текст влево, когда иконка скрыта */
+}
 
 .delivery-form__input {
 	width: 340px;
@@ -371,12 +378,18 @@ a:hover {
 	border-radius: 6px;
 	border: #FFF;
 	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+
+	font-family: 'Martel Sans';
+	font-size: 16px;
+	letter-spacing: 0.03em;
+	padding-left: 50px;
+	transition: padding-left 0.3s ease;
 }
 
 .delivery-form__input::placeholder {
 	font-family: "Martel Sans";
 	color: #B7B9C3;
-	padding-left: 50px;
+	padding-left: 0;
 }
 
 .delivery__btn {
@@ -453,13 +466,26 @@ a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 55px 345px;
+	padding: 90px 375px 130px ;
 }
 
 .lemon__circle {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 50px;
+	position: relative;
+}
+
+.lemon__circle::before {
+	content: "";
+	position: absolute;
+	width: 126px;
+	height: 126px;
+	border-radius: 50%;
+	background-color: #ffe145;
+	top: 0;
+	left: 0;
 }
 
 .circle {
@@ -471,17 +497,6 @@ a:hover {
 	position: relative;
 }
 
-.circle::before {
-	content: "";
-	position: absolute;
-	width: 126px;
-	height: 126px;
-	border-radius: 50%;
-	background-color: #ffe145;
-	top: 0;
-	left: 0;
-}
-
 .circle::after {
 	content: "";
 	position: absolute;
@@ -489,8 +504,8 @@ a:hover {
 	height: 127px;
 	border-radius: 50%;
 	border: 1px solid #B79C10;
-	top: 0;
-	left: 0;
+	top: -40px; 
+	left: -45px;
 }
 
 .circle__text {
@@ -499,7 +514,6 @@ a:hover {
 	font-size: 24px;
 	line-height: 1.3;
 	letter-spacing: 0em;
-	/* margin-top: 50px; */
 }
 
 /*-----
@@ -537,4 +551,155 @@ a:hover {
 /*-------
 	FOOTER
 -------*/
+.footer {
+	background-color: #3F4255;
+	color: #D4D7E5;
+	padding: 50px 0;
+}
 
+.footer__top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__brand {
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+}
+
+.footer__apps {
+	display: flex;
+	gap: 10px;
+	position: relative;
+}
+
+.footer__apps::after {
+	content: "";
+	position: absolute;
+	width: 300px;
+	height: 1px;
+	background-color: #D4D7E5;
+	left: 0;
+	bottom: 78px;
+}
+
+.store {
+	height: 28px;
+}
+
+.footer__nav {
+	display: flex;
+	gap: 90px;
+}
+
+.footer__nav-col {
+
+}
+
+.footer__title {
+	font-family: "Poppins";
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.3;
+	letter-spacing: 0;
+	color: #fff;
+	margin-bottom: 24px;
+}
+
+.footer__links {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.footer__link {
+	font-family: "Martel Sans";
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: 0.03em;
+	color: #D4D7E5;
+}
+
+.footer__lang {
+	margin-top: 16px;
+}
+
+.footer__address {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.footer__address > p {
+	font-family: "Martel Sans";
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.03em;
+	color: #fff;
+}
+
+.number {
+	font-family: "Martel Sans";
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: 0.03em;
+	color: #D4D7E5;
+}
+
+.mail {
+	font-family: "Martel Sans";
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: 0.03em;
+	color: #D4D7E5;
+}
+
+.footer__bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 100px;
+}
+
+.footer__socials {
+	display: flex;
+	align-items: center;
+	gap: 27px;
+}
+
+.social {
+
+}
+
+.social__img {
+
+}
+
+.footer__legal {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+}
+
+.legal__text {
+	font-family: "Martel Sans";
+	font-weight: 800;
+	font-size: 12px;
+	line-height: 1.3;
+	letter-spacing: 0;
+	color: #fff;
+}
+
+.legal__name {
+	font-family: "Martel Sans";
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 1.3;
+	letter-spacing: 0;
+	color: #fff;
+}
