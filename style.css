@@ -252,6 +252,12 @@ a:hover {
 	font-family: "Martel Sans"
 }
 
+.offer__wrapper {
+	display: flex;
+	align-items: center;
+	gap: 290px;
+}
+
 .offers {
 	position: relative;
 	left: -25px;
@@ -283,9 +289,62 @@ a:hover {
 	font-weight: 300;
 }
 
+.plate__wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+}
+
+.welcome__img-wrapper {
+	position: relative;
+}
+
+.welcome__img-wrapper::after {
+	content: url('images/welcome/arrow.svg');
+	position: absolute;
+	top: 635px;
+	right: 80px;
+}
+
+.welcome__img-wrapper::before {
+	content: '';
+	position: absolute;
+	width: 125px;
+	height: 170px;
+	transform: rotate(-32deg);
+	background-image: url('images/welcome/rucola.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	bottom: 70px;
+	left: -115px;
+}
+
 .welcome__img {
 	margin-top: 25px;
-	width: 800px;
+	width: 650px;
+	height: 650px;
+	animation: spin-plate 60s linear infinite;
+}
+
+.welcome__img:hover {
+  animation-play-state: paused;
+}
+
+@keyframes spin-plate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.plate__text {
+	font-family: "Martel Sans";
+	color: #313030;
+	display: inline-flex;
+	justify-content: end
 }
 
 /*-------------
