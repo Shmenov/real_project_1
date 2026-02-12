@@ -83,6 +83,9 @@ body {
 
 hr {
 	margin: 0;
+	border: none;
+	background-color: #D4D7E5;
+	height: 1px;
 }
 
 img {
@@ -183,6 +186,28 @@ a:hover {
 	gap: 50px;
 }
 
+.header__profile {
+	font-family: "Martel Sans";
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: 0.03em;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.header__cart {
+	font-family: "Martel Sans";
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: 0.03em;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
 .burger-menu {
 	display: block;
 	padding: 0;
@@ -199,6 +224,10 @@ a:hover {
 /*---------
 	WELCOME
 ---------*/
+.welcome {
+	position: relative;
+	overflow-x: visible;
+}
 
 .welcome .container {
 	display: flex;
@@ -217,14 +246,13 @@ a:hover {
 	line-height: 1.1;
 	letter-spacing: 0.05em;
 	color: #3F4255;
-	width: 465px;
+	width: 500px;
 	margin-bottom: 90px;
 }
 
 .welcome__btns-wrapper {
 	display: flex;
 	gap: 25px;
-	margin-bottom: 280px;
 }
 
 .welcome__btn {
@@ -252,19 +280,13 @@ a:hover {
 	font-family: "Martel Sans"
 }
 
-.offer__wrapper {
-	display: flex;
-	align-items: center;
-	gap: 290px;
-}
-
 .offers {
-	position: relative;
-	left: -25px;
-
+	position: absolute;
+	left: 0;
+	bottom: -55px;
 	display: flex;
-	width: 850px;
-	padding: 25px;
+	max-width: 900px;
+	padding: 28px 25px 28px 100px;
 	gap: 45px;
 
 	background-color: #fff;
@@ -276,8 +298,7 @@ a:hover {
 
 .offer {
 	display: flex;
-	gap: 16px;
-	width: 250px;
+	gap: 17px;
 }
 
 .offer__img {
@@ -287,6 +308,18 @@ a:hover {
 
 .offer__text {
 	font-weight: 300;
+}
+
+.offer__text--1 {
+	width: 180px;
+}
+
+.offer__text--2 {
+	width: 125px;
+}
+
+.offer__text--3 {
+	width: 170px;
 }
 
 .plate__wrapper {
@@ -321,14 +354,10 @@ a:hover {
 }
 
 .welcome__img {
-	margin-top: 25px;
 	width: 650px;
 	height: 650px;
+	margin-top: 25px;
 	animation: spin-plate 60s linear infinite;
-}
-
-.welcome__img:hover {
-  animation-play-state: paused;
 }
 
 @keyframes spin-plate {
@@ -351,7 +380,7 @@ a:hover {
 	RESTAURANTS
 -------------*/
 .restaurants {
-	margin-top: 50px;
+	margin-top: 105px;
 }
 
 .restaurants__card {
