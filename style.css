@@ -99,11 +99,6 @@ img {
 a {
 	text-decoration: none;
 	color: #9093A6;
-	transition: opacity 0.3s;
-}
-
-a:hover {
-	opacity: 0.6s; 
 }
 
 .container {
@@ -637,10 +632,60 @@ a:hover {
 }
 
 .link__card {
+	position: relative;
+	display: block;
+	border-radius: 6px;
+}
+
+.link__card::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0);
+	transition: background 0.4s ease;
+	z-index: 5;
+	border-radius: 6px;
+	transition: transform 0.4s ease;
+}
+
+.link__card:hover::after {
+	background-color: rgba(0, 0, 0, 0.4);
+	transform: scale(1.05);
+}
+
+.link__card::before {
+	content: "Go to Instagram";
+	position: absolute;
+	inset: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: #fff;
+	font-weight: 600;
+	font-size: 16px;
+
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	z-index: 10;
+}
+
+.link__card:hover::before {
+	opacity: 1;
+}
+
+.link__img {
 	width: 296px;
 	height: 299px;
 	border-radius: 6px;
 	object-fit: cover;
+	display: block;
+	transition: transform 0.4s ease;
+}
+
+.link__card:hover .link__img {
+    transform: scale(1.05);
 }
 
 /*-------
@@ -718,7 +763,36 @@ a:hover {
 }
 
 .footer__lang {
-	margin-top: 16px;
+	margin-top: 20px;
+	background-color: transparent;
+	padding: 0;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	border: none;
+}
+
+.footer__lang--text {
+	font-family: "Martel Sans";
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: 0.03em;
+	color: #D4D7E5;
+}
+
+.footer__arrow {
+	width: 14px;
+	transition: transform 0.3s ease;
+}
+
+.footer__lang:hover .footer__lang--text {
+  color: #fff;
+}
+
+.footer__lang:hover .footer__arrow {
+  transform: rotate(180deg); /* Стрелка перевернется */
 }
 
 .footer__address {
