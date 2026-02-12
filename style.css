@@ -66,6 +66,10 @@ Bold 700
 ExtraBold 800
 */
 
+html, body {
+	height: 100%;
+}
+
 html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
@@ -541,39 +545,33 @@ a:hover {
 /*-------
 	LEMON
 -------*/
-
 .lemon {
-	height: 290px;
+	/* height: 290px; */
 	background-image: url('/images/lemon.jpg');
-	background-position: 90% 15%;
-	background-size: 130%;
+	/* background-position: 90% 15%; */
+	/* background-size: 130%; */
+	background-position: center;
+	background-size: cover;
+	padding: 100px 0;
 	background-repeat: no-repeat;
 }
 
 .lemon__wrapper {
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 90px 375px 130px ;
+	align-items: flex-start;
+	justify-content: space-around;
+	/* padding: 90px 375px 130px ; */
+	flex-wrap: wrap;
+	gap: 30px;
 }
 
-.lemon__circle {
+.lemon__item { 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 50px;
-	position: relative;
-}
-
-.lemon__circle::before {
-	content: "";
-	position: absolute;
-	width: 126px;
-	height: 126px;
-	border-radius: 50%;
-	background-color: #ffe145;
-	top: 0;
-	left: 0;
+	gap: 30px;
+	text-align: center;
+	width: 200px;
 }
 
 .circle {
@@ -583,17 +581,25 @@ a:hover {
 	line-height: 1.1;
 	letter-spacing: 0.05em;
 	position: relative;
+	color: #3F4255;
+	width: 126px;
+	height: 126px;
+	border-radius: 50%;
+	background-color: #FFE145;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .circle::after {
 	content: "";
 	position: absolute;
-	width: 127px;
-	height: 127px;
+	width: 100%;
+	height: 100%;
 	border-radius: 50%;
 	border: 1px solid #B79C10;
-	top: -40px; 
-	left: -45px;
+	top: -20px; 
+	left: 0;
 }
 
 .circle__text {
@@ -602,6 +608,7 @@ a:hover {
 	font-size: 24px;
 	line-height: 1.3;
 	letter-spacing: 0em;
+	color:#3F4255
 }
 
 /*-----
