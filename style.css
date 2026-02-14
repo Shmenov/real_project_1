@@ -173,6 +173,8 @@ a {
 	height: 48px;
 	background-color: #fff;
 	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+	transition: all 0.3s ease;
+	z-index: 15;
 }
 
 .card__btn-1 {
@@ -184,6 +186,22 @@ a {
 	top: 124px;
 	right: -20px;
 	transform: rotate(180deg);
+}
+
+.btn__img {
+	fill: #9093A6;
+}
+
+.card__btn:hover {
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card__btn:active {
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card__btn:active .btn__img {
+	fill: #3F4255;
 }
 
 /*---------
@@ -475,9 +493,44 @@ a {
 }
 
 .card {
-  box-shadow: 0px 2px 16px rgba(60, 62, 74, 0.08);
+	position: relative;
+	display: block;
 	border-radius: 5px;
+	box-shadow: 0px 2px 16px rgba(60, 62, 74, 0.08);
 	overflow: hidden;
+}
+
+.card::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0);
+	z-index: 5;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+
+.card:hover::after {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card::before {
+	content: "Order in & Grab ang go";
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-weight: 600;
+	font-size: 16px;
+	opacity: 0;
+	transition: all 0.3s ease;
+	z-index: 10;
+}
+
+.card:hover::before {
+	opacity: 1;
 }
 
 .card__img-top {
@@ -776,10 +829,9 @@ a {
 	position: absolute;
 	inset: 0;
 	background: rgba(0, 0, 0, 0);
-	transition: background 0.4s ease;
 	z-index: 5;
 	border-radius: 6px;
-	transition: transform 0.4s ease;
+	transition: all 0.4s ease;
 }
 
 .link__card:hover::after {
