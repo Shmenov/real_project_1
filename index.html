@@ -9,17 +9,27 @@
 <body>
 	<header class="header">
 		<div class="container">
-			<a href="#">
-				<img src="/images/header/Logo.png" alt="" class="logotype">
+			<a href="#" class="logotype">
+				<img src="/images/header/Logo.png" alt="" class="logo__img">
 			</a>
 
 			<nav class="header__nav">
 				<ul class="header__list">
-					<li><a href="#" class="header__profile"><img src="/images/header/profile.svg" alt=""> Log in</a></li>
-					<li><a href="#" class="header__cart"><img src="/images/header/cart.svg" alt="">0</a></li>
+					<li><a href="#" class="header__profile">
+						<svg class="profile__img" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8 2C9.1 2 10 2.9 10 4C10 5.1 9.1 6 8 6C6.9 6 6 5.1 6 4C6 2.9 6.9 2 8 2ZM8 12C10.7 12 13.8 13.29 14 14H8H2C2.23 13.28 5.31 12 8 12ZM8 0C5.79 0 4 1.79 4 4C4 6.21 5.79 8 8 8C10.21 8 12 6.21 12 4C12 1.79 10.21 0 8 0ZM8 10C5.33 10 0 11.34 0 14V16H16V14C16 11.34 10.67 10 8 10Z"/>
+						</svg>Log in</a></li>
+					<li><a href="#" class="header__cart">
+						<svg class="cart__img" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path d="M14.55 11C15.3 11 15.96 10.59 16.3 9.97L19.88 3.48C20.25 2.82 19.77 2 19.01 2H4.21L3.27 0H0V2H2L5.6 9.59L4.25 12.03C3.52 13.37 4.48 15 6 15H18V13H6L7.1 11H14.55ZM5.16 4H17.31L14.55 9H7.53L5.16 4ZM6 16C4.9 16 4.01 16.9 4.01 18C4.01 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16ZM16 16C14.9 16 14.01 16.9 14.01 18C14.01 19.1 14.9 20 16 20C17.1 20 18 19.1 18 18C18 16.9 17.1 16 16 16Z"/>
+						</svg>0</a></li>
 				</ul>
 				<button class="burger-menu" type="button">
-					<img src="images/header/open.svg" alt="" class="burger-menu__icon">
+					<svg class="burger-menu__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M24 13H0V11H24V13Z"/>
+						<path d="M24 2H0V0H24V2Z"/>
+						<path d="M24 24H0V22H24V24Z"/>
+					</svg>
 				</button>
 			</nav>
 		</div>
@@ -69,7 +79,8 @@
 			<div class="container">
 				<div class="name">
 					<h2 class="title">Restaurants</h2>
-					<a href="#" class="btn">show all</a>
+					<!-- <a href="#" class="btn">show all</a> -->
+					 <button type="button" class="btn">show all</button>
 				</div>
 
 				<div class="restaurants__card">
@@ -106,7 +117,8 @@
 					<form class="delivery__form">
 						<input type="text" class="delivery-form__input" placeholder="Enter delivery address">
 					</form>
-					<a href="#" class="delivery__btn">send</a>
+					<!-- <a href="#" class="delivery__btn">send</a> -->
+					 <button class="delivery__btn" type="submit">send</button>
 				</div>
 
 			</div>
@@ -116,7 +128,8 @@
 			<div class="container">
 				<div class="name">
 					<h2 class="title">Specialities</h2>
-					<a href="#" class="btn">show all</a>
+					<!-- <a href="#" class="btn">show all</a> -->
+					 <button class="btn" type="button">show all</button>
 				</div>
 
 				<div class="speacial__card">
@@ -161,22 +174,22 @@
 		<section class="lemon">
 			<div class="container">
 				<div class="lemon__wrapper">
-					<div class="lemon__item">
+					<a href="#" class="lemon__item">
 						<div class="circle">1</div>
 						<p class="circle__text">kitchen</p>
-					</div>
-					<div class="lemon__item">
+					</a>
+					<a href="#" class="lemon__item">
 						<div class="circle">11</div>
 						<p class="circle__text">specialties</p>
-					</div>
-					<div class="lemon__item">
+					</a>
+					<a href="#" class="lemon__item">
 						<div class="circle">11</div>
 						<p class="circle__text">restaurants</p>
-					</div>
-					<div class="lemon__item">
+					</a>
+					<a href="#" class="lemon__item">
 						<div class="circle">1</div>
 						<p class="circle__text">transport costs</p>
-					</div>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -206,10 +219,10 @@
 
 			<div class="footer__top">
 				<div class="footer__brand">
-					<a href="#"><img src="/images/Logo-white.png" alt="" class="logotype"></a>
+					<a href="#" class="logotype"><img src="/images/Logo-white.png" alt="" class="logo__img"></a>
 					<div class="footer__apps">
-						<img src="/images/market/ios.png" alt="" class="store">
-						<img src="/images/market/android.png" alt="" class="store">
+						<a href="#" class="store"><img src="/images/market/ios.png" alt="" class="img__store"></a>
+						<a href="#" class="store"><img src="/images/market/android.png" alt="" class="img__store"></a>
 					</div>
 				</div>
 
