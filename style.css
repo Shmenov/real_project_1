@@ -1004,37 +1004,54 @@ a {
 }
 
 .footer__lang {
-	margin-top: 20px;
-	background-color: transparent;
-	padding: 0;
-	cursor: pointer;
-	display: flex;
+	position: relative;
+	display: inline-flex;
 	align-items: center;
-	gap: 8px;
-	border: none;
+	margin-top: 20px;
+	color: #D4D7E5;
+	transition: all 0.3s ease;
 }
 
-.footer__lang--text {
-	font-family: "Martel Sans";
+.footer__select {
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+	background-color: transparent;
+	border: none;
+	font-family: "Martel Sans", sans-serif;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.25;
 	letter-spacing: 0.03em;
-	color: #D4D7E5;
+	color: inherit;
+	cursor: pointer;
+	padding-right: 20px;
+	padding-left: 0;
+	margin: 0;
+	outline: none;
 }
 
 .footer__arrow {
-	fill: #D4D7E5;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	fill: currentColor;
 	transition: all 0.3s ease;
 }
 
-.footer__lang:hover .footer__lang--text {
+.footer__lang:hover {
   color: #fff;
 }
 
 .footer__lang:hover .footer__arrow {
-  transform: rotate(180deg); /* Стрелка перевернется */
-	fill: #fff;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.footer__select option {
+	background-color: #3F4255;
+	color: #fff;
 }
 
 .footer__address {
